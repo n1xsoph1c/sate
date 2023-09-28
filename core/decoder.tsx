@@ -1,8 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import { EPagerElements, TCollapsible, TencodedPage,  } from "./types";
+import { JSX } from "react/jsx-runtime";
 
 function Collapsible({ heading, children }: { heading: string; children: ReactNode }): JSX.Element {
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
