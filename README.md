@@ -18,7 +18,7 @@ The Pager project is a TypeScript-based utility for encoding and decoding text c
 The Pager project is structured as follows:
 
 pager/
-├── core/
+|── core/
 │ ├── decoder.tsx
 │ ├── encoder.ts
 │ ├── pager.ts
