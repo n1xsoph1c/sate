@@ -1,17 +1,16 @@
 {
-  "name": "webp-gallery",
-  "version": "0.1.0",
+  "name": "pager",
+  "version": "0.1",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "author": {
+    "email": "pttrafiahmed@gmail.com",
+    "name": "Rafi Ahmed Saad",
+    "url": "https://www.github.com/n1xsoph1c/pager"
   },
+
   "dependencies": {
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "typescript": "latest",
