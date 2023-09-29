@@ -8,7 +8,8 @@
   },
   "main": "./index.ts",
   "files": [
-    "dist"
+    "core",
+    "index.ts"
   ],
   "private": false,
   "dependencies": {
