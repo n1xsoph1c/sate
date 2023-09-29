@@ -1,12 +1,11 @@
 {
   "name": "sate-text-editor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
-
   "dependencies": {
     "react": "latest",
     "react-dom": "latest"
