@@ -31,7 +31,7 @@ Once you've installed SATE, you can start incorporating it into your project. He
   1. Import SATE into your JavaScript or TypeScript file:
 
 ```javascript
-import { SATE } from 'sate';
+import { SATE } from 'sate-editor/dist';
 ```
 
   2. Create an instance of SATE:
@@ -74,7 +74,7 @@ Create a new React component where you want to use the SATE Editor. For example,
 // src/SateDemo.js
 
 import React, { useState } from 'react';
-import { SATE } from 'sate-editor';
+import { SATE } from 'sate-editor/dist';
 
 const SateDemo = () => {
   const [text, setText] = useState('');
@@ -83,11 +83,13 @@ const SateDemo = () => {
   const sateEditor = new SATE()
 
   const handleEncode = () => {
+    // ENCODE THE TEXT INPUT 
     const data = sateEditor.encode(text);
     setEncodedData(data);
   };
 
   const handleDecode = () => {
+    // DECODE THE ENCODED TEXT
     const elements = sateEditor.decode(encodedData);
     setJsxElements(elements);
   };
