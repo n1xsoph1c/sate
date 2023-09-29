@@ -8,10 +8,7 @@ Welcome to the official documentation for SATE - a TypeScript-based utility for 
 2. [Installation](#installation)
 3. [Getting Started](#getting-started)
 4. [Usage](#usage)
-5. [API Reference](#api-reference)
-6. [Examples](#examples)
-7. [Contributing](#contributing)
-8. [License](#license)
+
 
 ## Introduction
 
@@ -64,9 +61,9 @@ cd pager-demo
 Navigate to your React application's directory and install the Pager project as a dependency:
 
 ```bash
-npm install pager
+npm install sate-editor
 # or
-yarn add pager
+yarn add sate-editor
 ```
 
 ### Step 3: Create a Component
