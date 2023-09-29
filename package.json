@@ -1,13 +1,12 @@
 {
   "name": "sate-editor",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
   "private": false,
-
   "dependencies": {
     "postcss": "8.4.27",
     "tailwindcss": "3.3.3"
