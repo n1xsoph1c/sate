@@ -2,7 +2,7 @@ import { Encoder } from "./encoder";
 import { Decoder } from "./decoder"
 import { TencodedPage } from "./types";
 
-export class Pager {
+export class SATE {
     encoder = new Encoder()
     decoder = new Decoder()
 

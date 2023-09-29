@@ -1,15 +1,51 @@
-# Pager 
+# SATE Documentation
+
+Welcome to the official documentation for SATE - a TypeScript-based utility for encoding and decoding text content into a structured format, enabling seamless content rendering within React applications.
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [How to use](#how-to-use)
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Getting Started](#getting-started)
+4. [Usage](#usage)
+5. [API Reference](#api-reference)
+6. [Examples](#examples)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Introduction
 
-The Pager project is a TypeScript-based utility for encoding and decoding text content into a structured format, allowing easy rendering of content in React applications. This documentation provides an overview of the project's structure and its core components.
+SATE is a versatile text manipulation tool designed to simplify the process of encoding and decoding text content, making it easier to render structured content in React applications. This documentation provides comprehensive information on how to utilize SATE effectively.
 
-## How to Use 
+## Installation
 
+To begin using SATE in your project, follow these installation steps:
+
+```bash
+npm install sate-editor
+# or
+yarn add sate-editor
+```
+
+## Getting Started
+
+Once you've installed SATE, you can start incorporating it into your project. Here's a quick guide to getting started:
+
+  1. Import SATE into your JavaScript or TypeScript file:
+
+```javascript
+import { SATE } from 'sate';
+```
+
+  2. Create an instance of SATE:
+
+```javascript
+    const sateEditor = new SATE();
+```
+
+3.Begin encoding and decoding text content with SATE's powerful functionality.
+
+## Usage
 ### Prerequisites
 
 Make sure you have Node.js and npm (Node Package Manager) installed on your system.
@@ -23,7 +59,7 @@ npx create-react-app pager-demo
 cd pager-demo
 ```
 
-### Step 2: Install the Pager Project
+### Step 2: Install SATE Editor
 
 Navigate to your React application's directory and install the Pager project as a dependency:
 
@@ -35,35 +71,33 @@ yarn add pager
 
 ### Step 3: Create a Component
 
-Create a new React component where you want to use the Pager project. For example, let's create a component called PagerDemo.js:
+Create a new React component where you want to use the SATE Editor. For example, let's create a component called SateDemo.js:
 
 ```jsx
-
-// src/PagerDemo.js
+// src/SateDemo.js
 
 import React, { useState } from 'react';
-import { Pager } from 'pager';
+import { SATE } from 'sate-editor';
 
-const PagerDemo = () => {
+const SateDemo = () => {
   const [text, setText] = useState('');
   const [encodedData, setEncodedData] = useState([]);
   const [jsxElements, setJsxElements] = useState(null);
+  const sateEditor = new SATE()
 
   const handleEncode = () => {
-    const pager = new Pager();
-    const data = pager.encode(text);
+    const data = sateEditor.encode(text);
     setEncodedData(data);
   };
 
   const handleDecode = () => {
-    const pager = new Pager();
-    const elements = pager.decode(encodedData);
+    const elements = sateEditor.decode(encodedData);
     setJsxElements(elements);
   };
 
   return (
     <div>
-      <h1>Pager Demo</h1>
+      <h1>Sate Editor Demo</h1>
       <textarea
         placeholder="Enter text content here..."
         value={text}
@@ -84,12 +118,12 @@ const PagerDemo = () => {
   );
 };
 
-export default PagerDemo;
+export default SateDemo;
 ```
 
 ### Step 4: Add the Component to Your App
 
-In your `src/App.js` file or any other entry point, import and render the PagerDemo component:
+In your `src/App.js` file or any other entry point, import and render the SateDemo component:
 
 ```jsx
 
@@ -97,12 +131,12 @@ In your `src/App.js` file or any other entry point, import and render the PagerD
 
 import React from 'react';
 import './App.css';
-import PagerDemo from './PagerDemo';
+import SateDemo from './SateDemo';
 
 function App() {
   return (
     <div className="App">
-      <PagerDemo />
+      <SateDemo />
     </div>
   );
 }
@@ -115,12 +149,15 @@ export default App;
 Start your React application:
 
 ```bash
+
 npm start
 # or
 yarn start
 ```
 
-Visit http://localhost:3000 in your web browser to see the Pager Demo in action. 
-You can enter text, encode it, and then decode it to render structured content as JSX elements.
+Visit http://localhost:3000 in your web browser to see the Pager Demo in action. You can enter text, encode it, and then decode it to render structured content as JSX elements.
 
-That's it! You've successfully integrated and used the Pager project in your React application. 
+
+SATE is released under the MIT License. Please review the license for information regarding usage and distribution.
+
+Thank you for choosing SATE for your text encoding and decoding needs. If you have any questions or encounter any issues, don't hesitate to reach out to our support team. Happy coding!

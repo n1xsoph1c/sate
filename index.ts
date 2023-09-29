@@ -1,1 +1,1 @@
-export { Pager } from "./core/pager"
+export { SATE } from "./core/sate"

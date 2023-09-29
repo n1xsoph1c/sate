@@ -1,4 +1,4 @@
-export enum EPagerElements {
+export enum ESateElements {
     p = "p",
     h1 = "h1",
     h2 = "h2",
@@ -14,7 +14,7 @@ export enum EPagerElements {
 
 export type TencodedPage = {
     id: number,
-    type: EPagerElements,
+    type: ESateElements,
     content?: string | null | TCollapsible
 }
 
