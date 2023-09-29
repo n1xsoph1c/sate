@@ -46,7 +46,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \**************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.SATE = void 0;\nconst encoder_1 = __webpack_require__(/*! ./encoder */ \"./src/core/encoder.ts\");\nconst decoder_1 = __importDefault(__webpack_require__(/*! ./decoder */ \"./src/core/decoder.tsx\"));\nclass SATE {\n    encoder = new encoder_1.Encoder();\n    decoder = new decoder_1.default();\n    encode(text) {\n        return this.encoder.encodeTEXT(text);\n    }\n    decode(data) {\n        return this.decoder.decodeToJSX(data);\n    }\n}\nexports.SATE = SATE;\n\n\n//# sourceURL=webpack://sate-editor/./src/core/sate.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Sate = void 0;\nconst encoder_1 = __webpack_require__(/*! ./encoder */ \"./src/core/encoder.ts\");\nconst decoder_1 = __importDefault(__webpack_require__(/*! ./decoder */ \"./src/core/decoder.tsx\"));\nclass Sate {\n    encoder = new encoder_1.Encoder();\n    decoder = new decoder_1.default();\n    encode(text) {\n        return this.encoder.encodeTEXT(text);\n    }\n    decode(data) {\n        return this.decoder.decodeToJSX(data);\n    }\n}\nexports.Sate = Sate;\n\n\n//# sourceURL=webpack://sate-editor/./src/core/sate.ts?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst sate_1 = __webpack_require__(/*! ./core/sate */ \"./src/core/sate.ts\");\nexports[\"default\"] = { SATE: sate_1.SATE };\n\n\n//# sourceURL=webpack://sate-editor/./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Sate = void 0;\nvar sate_1 = __webpack_require__(/*! ./core/sate */ \"./src/core/sate.ts\");\nObject.defineProperty(exports, \"Sate\", ({ enumerable: true, get: function () { return sate_1.Sate; } }));\n\n\n//# sourceURL=webpack://sate-editor/./src/index.ts?");
 
 /***/ }),
 

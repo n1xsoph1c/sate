@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { TencodedPage } from "./types";
-export declare class SATE {
+export declare class Sate {
     private encoder;
     private decoder;
     encode(text: string): TencodedPage[];
