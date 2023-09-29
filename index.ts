@@ -1,2 +1,1 @@
-import { Sate } from "./core/sate";
-export {Sate}
+import { Sate } from "./dist/core/sate"

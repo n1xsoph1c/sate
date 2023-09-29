@@ -6,7 +6,7 @@
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
-  "main": "./dist/index.ts",
+  "main": "./dist/index.js",
   "files": [
     "dist",
     "core"
