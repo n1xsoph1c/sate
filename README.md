@@ -52,8 +52,8 @@ Make sure you have Node.js and npm (Node Package Manager) installed on your syst
 If you don't have a React application already set up, you can create one using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) or your preferred method.
 
 ```bash
-npx create-react-app pager-demo
-cd pager-demo
+npx create-react-app sate-demo
+cd sate-demo
 ```
 
 ### Step 2: Install SATE Editor
