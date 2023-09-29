@@ -1,7 +1,7 @@
 const Encoder = require("./encoder");
 const Decoder = require("./decoder");
 
-class SATE {
+export class SATE {
     constructor() {
         this.encoder = new Encoder();
         this.decoder = new Decoder();
@@ -16,4 +16,3 @@ class SATE {
     }
 }
 
-module.exports = SATE;

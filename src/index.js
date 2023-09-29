@@ -1,3 +1,1 @@
-const { SATE } = require("./core/sate");
-
-module.exports = { SATE };
+export {SATE} from './core/sate'
