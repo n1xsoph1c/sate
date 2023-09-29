@@ -10,6 +10,11 @@
     "react": "latest",
     "react-dom": "latest"
   },
+  
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
@@ -21,6 +26,7 @@
     "tailwindcss": "latest",
     "ts-loader": "^9.4.4",
     "typescript": "latest",
+    "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
   "license": "MIT",
