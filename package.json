@@ -7,9 +7,7 @@
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
   "private": false,
-  "publishConfig": {
-    "access": "restricted"
-  },
+
   "dependencies": {
     "postcss": "8.4.27",
     "tailwindcss": "3.3.3"
