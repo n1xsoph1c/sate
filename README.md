@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Project Structure](#project-structure)
 - [Decoder](#decoder)
 - [Encoder](#encoder)
 - [Pager](#pager)
@@ -11,7 +12,7 @@
 
 The Pager project is a TypeScript-based utility for encoding and decoding text content into a structured format, allowing easy rendering of content in React applications. This documentation provides an overview of the project's structure and its core components.
 
-# Project Structure
+## Project Structure
 
 The Pager project is organized into the following directory structure:
 ```
