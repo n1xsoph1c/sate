@@ -1,11 +1,8 @@
 # Pager 
 
 ## Table of Contents
-
 - [Introduction](#introduction)
-- [Usage](#how-to-use)
-- [Encoder](#encoder)
-- [Pager](#pager)
+- [How to use](#how-to-use)
 
 ## Introduction
 
@@ -13,56 +10,117 @@ The Pager project is a TypeScript-based utility for encoding and decoding text c
 
 ## How to Use 
 
-To use the Pager project in your own application, follow these steps:
+### Prerequisites
 
-1. **Installation**: First, make sure you have Node.js and npm (or yarn) installed on your system. Then, navigate to your project directory and run the following command to install the Pager project as a dependency:
+Make sure you have Node.js and npm (Node Package Manager) installed on your system.
 
-   ```bash
-   npm install pager
-   # or
-   yarn add pager
-   ```
+### Step 1: Create a React Application
 
-2. **Import the Pager Class**: In your JavaScript or TypeScript file where you want to use the Pager project, import the `Pager` class:
+If you don't have a React application already set up, you can create one using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) or your preferred method.
 
-   ```javascript
-   import { Pager } from 'pager';
-   ```
+```bash
+npx create-react-app pager-demo
+cd pager-demo
+```
 
-3. **Create an Instance**: Create an instance of the `Pager` class:
+### Step 2: Install the Pager Project
 
-   ```javascript
-   const pager = new Pager();
-   ```
+Navigate to your React application's directory and install the Pager project as a dependency:
 
-4. **Encoding Content**: To encode text content, use the `encode` method of the `Pager` instance. Pass the text content as a string:
+```bash
+npm install pager
+# or
+yarn add pager
+```
 
-   ```javascript
-   const encodedData = pager.encode("Your text content goes here.");
-   ```
+### Step 3: Create a Component
 
-   This will return a structured data format that can be used for rendering.
+Create a new React component where you want to use the Pager project. For example, let's create a component called PagerDemo.js:
 
-5. **Decoding Content**: To decode the structured data into React JSX elements, use the `decode` method of the `Pager` instance. Pass the encoded data:
+```jsx
 
-   ```javascript
-   const jsxElements = pager.decode(encodedData);
-   ```
+// src/PagerDemo.js
 
-   You can now render the `jsxElements` in your React application.
+import React, { useState } from 'react';
+import { Pager } from 'pager';
 
-6. **Rendering**: Render the JSX elements in your React component's render method or functional component:
+const PagerDemo = () => {
+  const [text, setText] = useState('');
+  const [encodedData, setEncodedData] = useState([]);
+  const [jsxElements, setJsxElements] = useState(null);
 
-   ```javascript
-   function MyComponent() {
-     return (
-       <div>
-         {jsxElements}
-       </div>
-     );
-   }
-   ```
+  const handleEncode = () => {
+    const pager = new Pager();
+    const data = pager.encode(text);
+    setEncodedData(data);
+  };
 
-That's it! You've successfully integrated and used the Pager project in your application to encode and decode structured content. You can customize the encoding and decoding logic based on your specific requirements.
+  const handleDecode = () => {
+    const pager = new Pager();
+    const elements = pager.decode(encodedData);
+    setJsxElements(elements);
+  };
 
-For more details on how to use the Pager project and its features, refer to the Pager documentation and source code.
+  return (
+    <div>
+      <h1>Pager Demo</h1>
+      <textarea
+        placeholder="Enter text content here..."
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      ></textarea>
+      <br />
+      <button onClick={handleEncode}>Encode Text</button>
+      <button onClick={handleDecode}>Decode Text</button>
+      <div>
+        <h2>Encoded Data:</h2>
+        <pre>{JSON.stringify(encodedData, null, 2)}</pre>
+      </div>
+      <div>
+        <h2>Decoded JSX:</h2>
+        {jsxElements}
+      </div>
+    </div>
+  );
+};
+
+export default PagerDemo;
+```
+
+### Step 4: Add the Component to Your App
+
+In your `src/App.js` file or any other entry point, import and render the PagerDemo component:
+
+```jsx
+
+// src/App.js
+
+import React from 'react';
+import './App.css';
+import PagerDemo from './PagerDemo';
+
+function App() {
+  return (
+    <div className="App">
+      <PagerDemo />
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Step 5: Run Your React App
+
+Start your React application:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+Visit http://localhost:3000 in your web browser to see the Pager Demo in action. 
+You can enter text, encode it, and then decode it to render structured content as JSX elements.
+
+That's it! You've successfully integrated and used the Pager project in your React application. 
