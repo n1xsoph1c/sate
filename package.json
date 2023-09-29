@@ -1,6 +1,6 @@
 {
   "name": "sate-editor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
@@ -10,11 +10,9 @@
     "react": "latest",
     "react-dom": "latest"
   },
-  
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
-  
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
