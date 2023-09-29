@@ -40,6 +40,16 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 
 /***/ }),
 
+/***/ "./src/core/index.ts":
+/*!***************************!*\
+  !*** ./src/core/index.ts ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Sate = void 0;\nconst sate_1 = __webpack_require__(/*! ./sate */ \"./src/core/sate.ts\");\nObject.defineProperty(exports, \"Sate\", ({ enumerable: true, get: function () { return sate_1.Sate; } }));\n\n\n//# sourceURL=webpack://sate-editor/./src/core/index.ts?");
+
+/***/ }),
+
 /***/ "./src/core/sate.ts":
 /*!**************************!*\
   !*** ./src/core/sate.ts ***!
@@ -66,7 +76,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Sate = void 0;\nvar sate_1 = __webpack_require__(/*! ./core/sate */ \"./src/core/sate.ts\");\nObject.defineProperty(exports, \"Sate\", ({ enumerable: true, get: function () { return sate_1.Sate; } }));\n\n\n//# sourceURL=webpack://sate-editor/./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Sate = void 0;\nconst core_1 = __webpack_require__(/*! ./core */ \"./src/core/index.ts\");\nObject.defineProperty(exports, \"Sate\", ({ enumerable: true, get: function () { return core_1.Sate; } }));\n\n\n//# sourceURL=webpack://sate-editor/./src/index.ts?");
 
 /***/ }),
 
