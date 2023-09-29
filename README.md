@@ -3,26 +3,27 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Project Structure](#project-structure)
 - [Decoder](#decoder)
 - [Encoder](#encoder)
 - [Pager](#pager)
-- [Types](#types)
 
 ## Introduction
 
 The Pager project is a TypeScript-based utility for encoding and decoding text content into a structured format, allowing easy rendering of content in React applications. This documentation provides an overview of the project's structure and its core components.
 
-## Project Structure
+```markdown
+# Project Structure
 
-The Pager project is structured as follows:
+The Pager project is organized into the following directory structure:
+```
+```text
 
 pager/
-|── core/
-│ ├── decoder.tsx
-│ ├── encoder.ts
-│ ├── pager.ts
-│ ├── types.ts
+├── core/
+│   ├── decoder.tsx
+│   ├── encoder.ts
+│   ├── pager.ts
+│   ├── types.ts
 ├── node_modules/
 ├── package.json
 ├── postcss.config.js
@@ -32,46 +33,82 @@ pager/
 ├── LICENSE
 ├── index.ts
 
+```
 
-- **core/**: Contains the core functionality of the Pager project.
-- **node_modules/**: Node.js modules required for the project.
-- **package.json**: Configuration file for Node.js packages used in the project.
-- **postcss.config.js**: Configuration file for PostCSS, a CSS post-processor.
-- **tailwind.config.js**: Configuration file for Tailwind CSS, a utility-first CSS framework.
-- **README.md**: This documentation file.
-- **tsconfig.json**: TypeScript configuration file.
-- **LICENSE**: License information for the project.
-- **index.ts**: The entry point of the project.
+- **core/**: This directory contains the core functionality of the Pager project. It includes the following files:
+  - `decoder.tsx`: Contains the decoding logic to convert encoded data into JSX elements.
+  - `encoder.ts`: Contains the encoding logic to transform text content into a structured format.
+  - `pager.ts`: Defines the `Pager` class, acting as the central interface for encoding and decoding content.
+  - `types.ts`: Contains TypeScript types and enums used throughout the project.
 
-## Decoder
+- **node_modules/**: This directory contains Node.js modules required for the project. These modules are specified in the `package.json` file and are typically installed using npm or yarn.
 
-The `Decoder` class in `decoder.tsx` is responsible for converting encoded data into React JSX elements. It provides the following functionalities:
+- **package.json**: This configuration file lists the Node.js packages and their versions used in the project. It also contains other project metadata.
 
-- Decodes encoded data into JSX elements.
-- Supports various element types such as paragraphs, headings, images, collapsible sections, and more.
-- Provides a `Collapsible` component for creating collapsible sections.
+- **postcss.config.js**: This file is the configuration for PostCSS, a CSS post-processor. It may include settings for processing and optimizing CSS.
 
-## Encoder
+- **tailwind.config.js**: This file is the configuration for Tailwind CSS, a utility-first CSS framework. It defines styles, variants, and other Tailwind CSS settings.
 
-The `Encoder` class in `encoder.ts` is responsible for encoding text content into a structured format. It provides the following functionalities:
+- **README.md**: The documentation file you are currently reading. It provides an overview of the project's structure, its core components, and instructions on how to use the Pager project.
 
-- Encodes text content into a structured format suitable for rendering.
-- Supports various element types and structures, including collapsible sections.
-- Transforms text tags into structured data.
+- **tsconfig.json**: The TypeScript configuration file for the project. It specifies TypeScript settings and compiler options.
 
-## Pager
+- **LICENSE**: This file contains license information for the project, including the terms and conditions under which it can be used.
 
-The `Pager` class in `pager.ts` acts as a central interface for encoding and decoding content. It utilizes the `Encoder` and `Decoder` classes to provide a simple API for encoding and decoding text content.
+- **index.ts**: The entry point of the project, which may contain initialization code or exports for other parts of the project.
 
-- `encode(text: string)`: Encodes text content and returns the structured data.
-- `decode(data: TencodedPage[])`: Decodes structured data into React JSX elements.
+## How to Use the Pager Project
 
-## Types
+To use the Pager project in your own application, follow these steps:
 
-The `types.ts` file defines TypeScript types and enums used throughout the project. Here are some important types and enums:
+1. **Installation**: First, make sure you have Node.js and npm (or yarn) installed on your system. Then, navigate to your project directory and run the following command to install the Pager project as a dependency:
 
-- `EPagerElements`: Enum defining various element types such as paragraphs, headings, collapsible sections, and more.
-- `TencodedPage`: Type representing encoded content elements with an ID, type, and optional content.
-- `TCollapsible`: Type representing a collapsible section with a heading and optional content.
+   ```bash
+   npm install pager
+   # or
+   yarn add pager
+   ```
 
-This documentation provides an overview of the Pager project's structure and core components. For more detailed information, please refer to the source code and comments in the respective files.
+2. **Import the Pager Class**: In your JavaScript or TypeScript file where you want to use the Pager project, import the `Pager` class:
+
+   ```javascript
+   import { Pager } from 'pager';
+   ```
+
+3. **Create an Instance**: Create an instance of the `Pager` class:
+
+   ```javascript
+   const pager = new Pager();
+   ```
+
+4. **Encoding Content**: To encode text content, use the `encode` method of the `Pager` instance. Pass the text content as a string:
+
+   ```javascript
+   const encodedData = pager.encode("Your text content goes here.");
+   ```
+
+   This will return a structured data format that can be used for rendering.
+
+5. **Decoding Content**: To decode the structured data into React JSX elements, use the `decode` method of the `Pager` instance. Pass the encoded data:
+
+   ```javascript
+   const jsxElements = pager.decode(encodedData);
+   ```
+
+   You can now render the `jsxElements` in your React application.
+
+6. **Rendering**: Render the JSX elements in your React component's render method or functional component:
+
+   ```javascript
+   function MyComponent() {
+     return (
+       <div>
+         {jsxElements}
+       </div>
+     );
+   }
+   ```
+
+That's it! You've successfully integrated and used the Pager project in your application to encode and decode structured content. You can customize the encoding and decoding logic based on your specific requirements.
+
+For more details on how to use the Pager project and its features, refer to the Pager documentation and source code.
