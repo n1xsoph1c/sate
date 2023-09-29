@@ -1,10 +1,9 @@
-# Pager Project Documentation
+# Pager 
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Project Structure](#project-structure)
-- [Decoder](#decoder)
+- [Usage](#how-to-use)
 - [Encoder](#encoder)
 - [Pager](#pager)
 
@@ -12,50 +11,7 @@
 
 The Pager project is a TypeScript-based utility for encoding and decoding text content into a structured format, allowing easy rendering of content in React applications. This documentation provides an overview of the project's structure and its core components.
 
-## Project Structure
-
-The Pager project is organized into the following directory structure:
-```
-pager/
-├── core/
-│   ├── decoder.tsx
-│   ├── encoder.ts
-│   ├── pager.ts
-│   ├── types.ts
-├── node_modules/
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── README.md
-├── tsconfig.json
-├── LICENSE
-├── index.ts
-
-```
-
-- **core/**: This directory contains the core functionality of the Pager project. It includes the following files:
-  - `decoder.tsx`: Contains the decoding logic to convert encoded data into JSX elements.
-  - `encoder.ts`: Contains the encoding logic to transform text content into a structured format.
-  - `pager.ts`: Defines the `Pager` class, acting as the central interface for encoding and decoding content.
-  - `types.ts`: Contains TypeScript types and enums used throughout the project.
-
-- **node_modules/**: This directory contains Node.js modules required for the project. These modules are specified in the `package.json` file and are typically installed using npm or yarn.
-
-- **package.json**: This configuration file lists the Node.js packages and their versions used in the project. It also contains other project metadata.
-
-- **postcss.config.js**: This file is the configuration for PostCSS, a CSS post-processor. It may include settings for processing and optimizing CSS.
-
-- **tailwind.config.js**: This file is the configuration for Tailwind CSS, a utility-first CSS framework. It defines styles, variants, and other Tailwind CSS settings.
-
-- **README.md**: The documentation file you are currently reading. It provides an overview of the project's structure, its core components, and instructions on how to use the Pager project.
-
-- **tsconfig.json**: The TypeScript configuration file for the project. It specifies TypeScript settings and compiler options.
-
-- **LICENSE**: This file contains license information for the project, including the terms and conditions under which it can be used.
-
-- **index.ts**: The entry point of the project, which may contain initialization code or exports for other parts of the project.
-
-## How to Use the Pager Project
+## How to Use 
 
 To use the Pager project in your own application, follow these steps:
 
