@@ -1,6 +1,6 @@
 {
   "name": "sate-editor",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
@@ -8,19 +8,15 @@
   },
   "main": "./dist/index.ts",
   "typings": "./dist/index.d.ts",
-  
   "files": [
     "dist"
   ],
-
   "private": false,
-
   "dependencies": {
     "postcss": "8.4.27",
     "tailwindcss": "3.3.3",
     "typescript": "^5.2.2"
   },
-
   "devDependencies": {
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
