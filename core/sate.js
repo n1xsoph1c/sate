@@ -1,15 +1,19 @@
-import { Encoder } from "./encoder";
-import { Decoder } from "./decoder.jsx"
+const Encoder = require("./encoder");
+const Decoder = require("./decoder");
 
-export class SATE {
-    encoder = new Encoder()
-    decoder = new Decoder()
+class SATE {
+    constructor() {
+        this.encoder = new Encoder();
+        this.decoder = new Decoder();
+    }
 
     encode(text) {
-        return this.encoder.encodeTEXT(text)
+        return this.encoder.encodeTEXT(text);
     }
 
     decode(data) {
-        return this.decoder.decodeToJSX(data)
+        return this.decoder.decodeToJSX(data);
     }
 }
+
+module.exports = SATE;
