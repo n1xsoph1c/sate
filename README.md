@@ -1,6 +1,6 @@
-# SATE Documentation
+# SATE 
 
-Welcome to the official documentation for SATE - a TypeScript-based utility for encoding and decoding text content into a structured format, enabling seamless content rendering within React applications.
+Saad's Awesome Text Editor - a TypeScript-based utility for encoding and decoding text content into a structured format, enabling seamless content rendering within React applications.
 
 ## Table of Contents
 
