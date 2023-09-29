@@ -1,21 +1,12 @@
 {
     "compilerOptions": {
-      "target": "es5",            // Specify your target ECMAScript version.
-      "module": "CommonJS",          // Specify the module system (e.g., commonjs, esnext).
+      "target": "es2015",            // Specify your target ECMAScript version.
+      "module": "commonjs",          // Specify the module system (e.g., commonjs, esnext).
       "outDir": "./dist",            // Specify the output directory for compiled files.
-      "rootDir": "./",            // Specify the root directory of your source files.
-      "strict": true,                // Enable strict type checking.
-      "esModuleInterop": true,       // Allow default imports from CommonJS modules.
-      "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names.
-      "moduleResolution": "Node",    // Use Node.js-style module resolution.
-      "declaration": true,           // Generate declaration files (.d.ts).
-      "sourceMap": true,             // Generate source maps for debugging.
-      "resolveJsonModule": true,     // Allow importing JSON files as modules.
-      "allowSyntheticDefaultImports": true, // Allow importing modules using 'import x from "y"' syntax.
-      "isolatedModules": true,        // Ensure each file is treated as a separate module.
       "jsx": "react",
+      "esModuleInterop":true,
     },
-    "include": ["src/**/*.ts", "index.ts"],      // Specify files to include in compilation.
+    "include": ["core/**/*.ts", "index.ts"],      // Specify files to include in compilation.
     "exclude": ["node_modules"]      // Specify files or directories to exclude from compilation.
   }
   
