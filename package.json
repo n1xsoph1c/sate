@@ -1,12 +1,11 @@
 {
   "name": "sate-editor",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
-
   "main": "./src/index.js",
   "private": false,
   "dependencies": {
