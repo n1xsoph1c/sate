@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/index.ts', // Adjust the entry point as needed.
     mode: "development",
     output: {
-        filename: 'sate-editor.ts', // Adjust the output filename as needed.
+        filename: 'index.ts', // Adjust the output filename as needed.
         path: path.resolve(__dirname, 'dist'), // Adjust the output directory as needed.
         library: 'sate-editor', // Change 'yourPackageName' to your package's name.
         libraryTarget: 'umd',

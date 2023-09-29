@@ -6,7 +6,8 @@
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
-  "main": "./dist/index.d.ts",
+  "main": "/dist/index.d.ts",
+  "files": ["/dist/*"],
   "private": false,
   "dependencies": {
     "postcss": "8.4.27",
