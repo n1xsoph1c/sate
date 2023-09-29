@@ -1,3 +1,2 @@
-import { SATE } from "./core/sate";
+export { Sate } from "./core/sate";
 
-export default {SATE}
