@@ -6,41 +6,21 @@
     "name": "n1xsoph1c",
     "url": "https://www.github.com/n1xsoph1c/sate"
   },
-  "main": "/dist/index.d.ts",
+  "main": "./dist/index.ts",
+  "typings": "./dist/index.d.ts",
+  
   "files": [
-    "/dist/*"
+    "dist"
   ],
+
   "private": false,
+
   "dependencies": {
     "postcss": "8.4.27",
     "tailwindcss": "3.3.3",
     "typescript": "^5.2.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "republish": "babel src/ -d dist --copy-files"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+
   "devDependencies": {
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",

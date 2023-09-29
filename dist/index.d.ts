@@ -1,2 +1,2 @@
-import { Sate } from "./core";
+import { Sate } from "./core/index";
 export { Sate };
