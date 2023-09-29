@@ -1,6 +1,6 @@
 {
   "name": "sate-editor",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
@@ -16,7 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
-
   },
   "peerDependencies": {
     "react": "^18.2.0",
