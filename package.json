@@ -21,11 +21,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest",
-    "ts-loader": "^9.4.4",
-    "typescript": "latest",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "tailwindcss": "latest"
   },
   "license": "MIT",
   "main": "index.ts"

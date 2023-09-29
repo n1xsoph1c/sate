@@ -1,16 +1,15 @@
 import { Encoder } from "./encoder";
-import { Decoder } from "./decoder"
-import { TencodedPage } from "./types";
+import { Decoder } from "./decoder.jsx"
 
 export class SATE {
     encoder = new Encoder()
     decoder = new Decoder()
 
-    encode(text:string) {
+    encode(text) {
         return this.encoder.encodeTEXT(text)
     }
 
-    decode(data: TencodedPage[]) {
+    decode(data) {
         return this.decoder.decodeToJSX(data)
     }
 }
