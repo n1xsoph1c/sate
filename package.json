@@ -1,6 +1,6 @@
 {
   "name": "sate-editor",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "author": {
     "email": "nixsophic@gmail.com",
     "name": "n1xsoph1c",
@@ -10,13 +10,11 @@
   "files": [
     "dist"
   ],
-
   "private": false,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-
   "devDependencies": {
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
