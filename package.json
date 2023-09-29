@@ -11,15 +11,17 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "ts-loader": "^9.4.4",
+    "typescript": "latest",
+    "webpack-cli": "^5.1.4"
   },
   "license": "MIT",
   "main": "index.ts"

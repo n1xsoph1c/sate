@@ -1,4 +1,4 @@
-import { TencodedPage, TCollapsible, EPagerElements } from './types';
+import { TencodedPage, TCollapsible, ESateElements } from './types';
 
 export class Encoder {
 
@@ -8,53 +8,53 @@ export class Encoder {
     }
 
     private getElementType(tag: string) {
-        if (tag.startsWith("> ")) return EPagerElements.Collapsible
-        if (tag.startsWith(">> ")) return EPagerElements.CollapsibleContent
-        if (tag.startsWith("#>")) return EPagerElements.CollapsibleEnd
-        if (tag.startsWith("# ")) return EPagerElements.h1
-        if (tag.startsWith("## ")) return EPagerElements.h2
-        if (tag.startsWith("### ")) return EPagerElements.h3
-        if (tag.startsWith("#### ")) return EPagerElements.h4
-        if (tag.startsWith("---")) return EPagerElements.hr
-        if (tag === "") return EPagerElements.br
-        if (tag.startsWith("img[")) return EPagerElements.img
+        if (tag.startsWith("> ")) return ESateElements.Collapsible
+        if (tag.startsWith(">> ")) return ESateElements.CollapsibleContent
+        if (tag.startsWith("#>")) return ESateElements.CollapsibleEnd
+        if (tag.startsWith("# ")) return ESateElements.h1
+        if (tag.startsWith("## ")) return ESateElements.h2
+        if (tag.startsWith("### ")) return ESateElements.h3
+        if (tag.startsWith("#### ")) return ESateElements.h4
+        if (tag.startsWith("---")) return ESateElements.hr
+        if (tag === "") return ESateElements.br
+        if (tag.startsWith("img[")) return ESateElements.img
 
-        return EPagerElements.p
+        return ESateElements.p
     }
 
-    private getContentFromElement(tag: string, elementType: EPagerElements) {
+    private getContentFromElement(tag: string, elementType: ESateElements) {
         switch (elementType) {
-            case EPagerElements.p:
+            case ESateElements.p:
                 return tag.trim()
 
-            case EPagerElements.h1:
+            case ESateElements.h1:
                 return tag.replace("# ", "").trim()
 
-            case EPagerElements.h2:
+            case ESateElements.h2:
                 return tag.replace("## ", "").trim()
 
-            case EPagerElements.h3:
+            case ESateElements.h3:
                 return tag.replace("### ", "").trim()
 
-            case EPagerElements.h4:
+            case ESateElements.h4:
                 return tag.replace("#### ", "").trim()
 
-            case EPagerElements.hr:
+            case ESateElements.hr:
                 return tag.replace("---", "")
 
-            case EPagerElements.br:
+            case ESateElements.br:
                 return ""
 
-            case EPagerElements.img:
+            case ESateElements.img:
                 return tag.replace("img[", "").replace("]", "").trim()
 
-            case EPagerElements.Collapsible:
+            case ESateElements.Collapsible:
                 return this.handleCollapsible(tag)
 
-            case EPagerElements.CollapsibleContent:
+            case ESateElements.CollapsibleContent:
                 return this.handleCollapsible(tag)
 
-            case EPagerElements.CollapsibleEnd:
+            case ESateElements.CollapsibleEnd:
                 return this.handleCollapsible(tag)
 
             default:
@@ -65,7 +65,7 @@ export class Encoder {
     private handleCollapsible(tag: string) {
         const collapsibleType = this.getElementType(tag)
 
-        if (collapsibleType === EPagerElements.Collapsible) {
+        if (collapsibleType === ESateElements.Collapsible) {
             // Check if collapsible Already open
             if (this.recentCollapsible.open) return null
 
@@ -82,24 +82,25 @@ export class Encoder {
             return this.recentCollapsible.collapsible
         }
 
-        if (collapsibleType === EPagerElements.CollapsibleContent) {
+        if (collapsibleType === ESateElements.CollapsibleContent) {
             // Check if collapsible closed 
-            if (!this.recentCollapsible.open) return this.getContentFromElement(tag, EPagerElements.p)
+            if (!this.recentCollapsible.open) return this.getContentFromElement(tag, ESateElements.p)
 
-            this.recentCollapsible.collapsible.content.push({
+            this.recentCollapsible.collapsible?.content?.push({
                 id: this.encodedLIST.length,
-                type: EPagerElements.p,
-                content: this.getContentFromElement(tag.replace(">>", ""), EPagerElements.p),
+                type: ESateElements.p,
+                content: this.getContentFromElement(tag.replace(">>", ""), ESateElements.p),
             })
 
             return null
         }
 
-        if (collapsibleType === EPagerElements.CollapsibleEnd) {
+        if (collapsibleType === ESateElements.CollapsibleEnd) {
             if (!this.recentCollapsible.open) return null
 
             this.recentCollapsible.open = false
             this.recentCollapsible.collapsible = null
+            return null
         }
     }
 
